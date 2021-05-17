@@ -1,0 +1,303 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+Very Dark Magenta: hsl(300, 43%, 22%)
+Soft Pink: hsl(333, 80%, 67%)
+
+### Neutral
+
+Dark Grayish Magenta: hsl(303, 10%, 53%)
+Light Grayish Magenta: hsl(300, 24%, 96%)
+White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Font
+
+- Family: [Spartan](https://fonts.google.com/specimen/Spartan)
+- Weights: 400, 500, 700
+*/
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+:root {
+  --magneta: hsl(300, 43%, 22%);
+  --pink: hsl(333, 80%, 67%);
+
+  --dark-magenta: hsl(303, 10%, 53%);
+  --light-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+
+  --border-radius: 10px;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  font-size: 1.5rem;
+  height: 100vh;
+  padding: 5em 0;
+  margin: 0;
+
+  background-image: url("images/bg-pattern-top-mobile.svg"),
+    url("images/bg-pattern-bottom-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top left, bottom right;
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.container {
+  margin: 0 auto;
+  width: 85%;
+}
+
+/* INTRODUCTION Section */
+
+.introduction {
+  color: var(--magneta);
+  text-align: center;
+}
+
+.introduction__title {
+  font-size: 3.3rem;
+}
+
+.introduction__content {
+  font-size: 1.4rem;
+  color: var(--dark-magenta);
+  width: 100%;
+  padding: 0;
+}
+
+.introduction__rates {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 3em 0;
+}
+
+.introduction__block {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 0;
+  width: 100%;
+  background: var(--light-magenta);
+  border-radius: var(--border-radius);
+}
+
+.introduction__block--center,
+.introduction__block--bottom {
+  margin-top: 1em;
+}
+
+.introduction__source {
+  font-weight: 700;
+  padding-top: 0.8em;
+}
+
+/* COMMENTS Section */
+
+.comments__block {
+  color: var(--white);
+  background: var(--magneta);
+  border-radius: var(--border-radius);
+  padding: 2.5em 2em;
+}
+
+.comments__block--center,
+.comments__block--bottom {
+  margin-top: 1em;
+}
+
+.comments__user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.comments__image {
+  border-radius: 50%;
+  width: 2.5em;
+  margin-right: 1em;
+}
+
+.comments__information {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+}
+
+.comments__status {
+  color: var(--pink);
+}
+
+@media only screen and (min-width: 600px) {
+  .introduction__content {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .comments__block {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .comments__block--center,
+  .comments__block--bottom {
+    margin-top: 1em;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .introduction__content {
+    width: 50%;
+  }
+
+  .introduction__rates {
+    flex-direction: row;
+  }
+
+  .introduction__block--center,
+  .introduction__block--bottom {
+    margin-top: 0;
+    margin-left: 0.5em;
+  }
+
+  .comments__block {
+    width: 30%;
+  }
+
+  .comments__block--center,
+  .comments__block--bottom {
+    margin-top: 0;
+    margin-left: 1em;
+  }
+
+  .comments {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 1350px) {
+  body {
+    padding: 5em 0 0 0;
+
+    background-image: url("images/bg-pattern-top-desktop.svg"),
+      url("images/bg-pattern-bottom-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+  }
+
+  .container {
+    width: 80%;
+  }
+
+  .introduction {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6em;
+  }
+
+  /* INTRODUCTION Section - General */
+
+  .introduction__general {
+    text-align: left;
+    width: 38%;
+  }
+
+  .introduction__title {
+    margin: 0 0 0.1em;
+    width: 80%;
+  }
+
+  .introduction__content {
+    width: 100%;
+  }
+
+  /* INTRODUCTION Section - Rates */
+
+  .introduction__rates {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 60%;
+    margin: 0;
+  }
+
+  .introduction__block {
+    flex-direction: row;
+    justify-content: flex-start;
+
+    width: 57%;
+    padding: 1em 2.5em 1em 2.5em;
+  }
+
+  .introduction__stars {
+    margin-right: 2em;
+  }
+
+  .introduction__source {
+    padding: 0;
+  }
+
+  .introduction__block--top {
+    margin-top: 0.5em;
+    margin-right: 6em;
+  }
+
+  .introduction__block--center {
+    margin-top: 1em;
+    margin-left: 0;
+    margin-right: 3em;
+  }
+
+  .introduction__block--bottom {
+    margin-top: 1em;
+    margin-left: 0;
+  }
+
+  /* COMMENTS Section */
+
+  .comments__block {
+    justify-content: flex-start;
+  }
+
+  .comments__block--top {
+    margin-bottom: 2em;
+  }
+
+  .comments__block--center {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 2em;
+  }
+
+  .comments__block--bottom {
+    margin-top: 2em;
+    margin-left: 2em;
+  }
+}
